@@ -3,14 +3,14 @@ name = "q2doc"
 authors = [
     { name = "Evan Bolyen", email = "developers@qiime2.org" }
 ]
-description = "Generate MystMD documentation from a qiime2 deployment."
+description = "Generate MystMD documentation from a rachis deployment."
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
 dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://qiime2.org"
-Repository = "https://github.com/qiime2/q2doc"
+Repository = "https://github.com/rachis-org/rachis-doc"
 
 [project.scripts]
 "q2doc" = "q2doc.__main__:root"

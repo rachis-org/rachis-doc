@@ -2,10 +2,10 @@ import re
 import os
 import shutil
 
-from qiime2.plugin import model
-from qiime2.plugin.model.directory_format import BoundFileCollection
+from rachis.plugin import model
+from rachis.plugin.model.directory_format import BoundFileCollection
 
-from q2cli.core.usage import CLIUsageVariable
+from rachis_cli.core.usage import CLIUsageVariable
 from q2galaxy.core.usage import GalaxyBaseUsage
 from q2galaxy.core.templaters.helpers import signature_to_galaxy
 from q2galaxy.core.templaters.common import (make_tool_name_from_id,
@@ -380,4 +380,3 @@ class MystGalaxyUsage(GalaxyBaseUsage):
             self.ast = []
 
         return ast
-

@@ -17,7 +17,7 @@ class DescribeArtifact(DirectiveHandler):
 
     @classmethod
     def format_record(cls, name, record):
-        from qiime2.sdk import PluginManager
+        from rachis.sdk import PluginManager
         header = md.heading_ast(1, md.inline_code_ast(name), id=type_to_id(name))
         ast = format_paragraphs(record.description)
         # ast.append(md.kv_list_ast({

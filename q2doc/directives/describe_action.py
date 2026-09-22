@@ -23,8 +23,8 @@ class DescribeAction(DirectiveHandler):
 
     @classmethod
     def format_type(cls, qiime_type, path=()):
-        import qiime2.sdk.util as util
-        from qiime2.plugin import Str
+        import rachis.sdk.util as util
+        from rachis.plugin import Str
         null_predicate = Str.full_predicate
 
         ast = []
@@ -169,4 +169,3 @@ class DescribeAction(DirectiveHandler):
             heading = ast[0]
             ast[0] = md.target_ast(heading['label'])
         return ast
-
