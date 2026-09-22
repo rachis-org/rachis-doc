@@ -17,7 +17,7 @@ class DescribeFormat(DirectiveHandler):
 
     @classmethod
     def format_record(cls, name, record):
-        from qiime2.plugin import TextFileFormat, BinaryFileFormat, DirectoryFormat
+        from rachis.plugin import TextFileFormat, BinaryFileFormat, DirectoryFormat
 
         header = md.heading_ast(1, md.inline_code_ast(name), id=format_to_id(name))
 

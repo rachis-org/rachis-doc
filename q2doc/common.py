@@ -11,7 +11,7 @@ def is_book(dir):
 def write_bibtex(dir, refresh=True):
     _ = get_cache(refresh=refresh)
 
-    from qiime2.sdk import PluginManager, Citations
+    from rachis.sdk import PluginManager, Citations
     pm = PluginManager()
 
 
@@ -31,7 +31,7 @@ def write_bibtex(dir, refresh=True):
 def write_plugin(dir, plugins, singlepage=False, root_dir='plugin-reference'):
     _ = get_cache(refresh=True)
 
-    from qiime2.sdk import PluginManager
+    from rachis.sdk import PluginManager
     pm = PluginManager()
 
     if plugins is not None:

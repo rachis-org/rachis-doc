@@ -1,4 +1,4 @@
-from qiime2.plugins import ArtifactAPIUsage
+from rachis.plugins import ArtifactAPIUsage
 from rachis_cli.core.usage import CLIUsageVariable
 
 from .common import _build_url

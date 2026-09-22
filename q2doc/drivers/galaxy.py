@@ -2,8 +2,8 @@ import re
 import os
 import shutil
 
-from qiime2.plugin import model
-from qiime2.plugin.model.directory_format import BoundFileCollection
+from rachis.plugin import model
+from rachis.plugin.model.directory_format import BoundFileCollection
 
 from rachis_cli.core.usage import CLIUsageVariable
 from q2galaxy.core.usage import GalaxyBaseUsage

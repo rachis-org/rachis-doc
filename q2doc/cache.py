@@ -21,12 +21,14 @@ def get_cache_dir():
 
 
 def _get_distro_versions():
+    import itertools
     import importlib.metadata as meta
-    versions = [('q2doc', __version__)]
-    for entry in meta.entry_points(group='rachis.plugins'):
+    versions = {('q2doc', __version__)}
+    for entry in itertools.chain(meta.entry_points(group='rachis.plugins'),
+                                 meta.entry_points(group='qiime2.plugins')):
         pkg = entry.module.split('.')[0]
         ver = meta.version(pkg)
-        versions.append((pkg, ver))
+        versions.add((pkg, ver))
     return sorted(versions)
 
 
@@ -52,7 +54,7 @@ def _write_requirements(file, reqs):
 
 
 def _refresh_cache(file):
-    from qiime2.sdk import PluginManager
+    from rachis.sdk import PluginManager
     from .directives import DIRECTIVES
     ast = {}
 

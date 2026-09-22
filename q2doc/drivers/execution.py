@@ -6,10 +6,10 @@ import shutil
 import tempfile
 from contextlib import redirect_stderr, redirect_stdout, contextmanager
 
-from qiime2 import ResultCollection
-from qiime2.util import redirected_stdio
-from qiime2.plugin import model
-from qiime2.sdk.usage import Usage, ExecutionUsageVariable
+from rachis import ResultCollection
+from rachis.util import redirected_stdio
+from rachis.plugin import model
+from rachis.sdk.usage import Usage, ExecutionUsageVariable
 
 from rachis_cli.core.usage import CLIUsage, CLIUsageVariable
 

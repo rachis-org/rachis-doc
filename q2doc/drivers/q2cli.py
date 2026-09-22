@@ -1,4 +1,4 @@
-from qiime2.sdk.usage import Usage
+from rachis.sdk.usage import Usage
 from rachis_cli.core.usage import CLIUsage
 import q2doc.myst as md
 
