@@ -11,7 +11,7 @@ from qiime2.util import redirected_stdio
 from qiime2.plugin import model
 from qiime2.sdk.usage import Usage, ExecutionUsageVariable
 
-from q2cli.core.usage import CLIUsage, CLIUsageVariable
+from rachis_cli.core.usage import CLIUsage, CLIUsageVariable
 
 import q2doc.myst as md
 

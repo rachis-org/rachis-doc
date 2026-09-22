@@ -4,7 +4,7 @@ import re
 from qiime2.sdk import usage
 from qiime2.plugins import _canonical_module
 
-from q2cli.core.usage import CLIUsageVariable
+from rachis_cli.core.usage import CLIUsageVariable
 
 import q2doc.myst as md
 from .common import _build_url

@@ -1,5 +1,5 @@
 from qiime2.plugins import ArtifactAPIUsage
-from q2cli.core.usage import CLIUsageVariable
+from rachis_cli.core.usage import CLIUsageVariable
 
 from .common import _build_url
 import q2doc.myst as md
