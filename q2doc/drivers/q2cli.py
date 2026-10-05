@@ -2,12 +2,13 @@ from rachis.sdk.usage import Usage
 from rachis_cli.core.usage import CLIUsage
 import q2doc.myst as md
 
-from .common import _build_url
+from .common import _build_url, _get_base_command
 
 
 class MystCLIUsage(CLIUsage):
     def __init__(self, data_dir, auto_collect_size):
-        super().__init__(action_collection_size=auto_collect_size)
+        super().__init__(action_collection_size=auto_collect_size,
+                         base_command=_get_base_command())
         self.scope = dict(use=self)
         self.data_dir = data_dir
 
