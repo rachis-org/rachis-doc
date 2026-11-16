@@ -10,12 +10,18 @@ def _get_base_command():
 
 
 def _build_url(data_dir, fn):
-    baseurl = os.environ.get('BASE_URL')
-    if baseurl is None:
-        baseurl = os.environ.get('READTHEDOCS_CANONICAL_URL')
-    if baseurl is None:
+    # Readers download these files (wget) and view.qiime2.org fetches them, so
+    # on Read the Docs use its absolute canonical URL (e.g.
+    # https://amplicon-docs.qiime2.org/en/stable/). BASE_URL is only a path (e.g.
+    # /en/stable, the form mystmd uses), and a Read the Docs build may set it for
+    # the site theme, so it comes second.
+    baseurl = (os.environ.get('READTHEDOCS_CANONICAL_URL')
+               or os.environ.get('BASE_URL'))
+    if not baseurl:
         # prevent myst from treating it as a local ref (and clobbering the url)
         baseurl = '/'
+    if not baseurl.endswith('/'):
+        baseurl += '/'
 
     parts = list(urllib.parse.urlparse(baseurl))
     parts[2] += '/'.join([str(data_dir), str(fn)])
